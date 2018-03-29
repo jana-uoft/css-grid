@@ -1,0 +1,70 @@
+body {
+  color: white;
+  margin: 0;
+  
+}
+
+
+.container{
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-areas: 
+    "sidebar sidebar header header header header header header"
+    "sidebar sidebar content content content content content content";
+}
+
+.sidebar{
+  grid-area: sidebar;
+  background: rgb(73, 66, 78);
+}
+
+.header{
+  grid-area: header;
+  background: rgb(43, 40, 40);
+  height: 50px;
+}
+
+.content{
+  grid-area: content;
+  background: rgb(165, 158, 158);
+}
+
+
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 0px) and (max-device-width : 480px) {
+  .container{
+    grid-template-areas: 
+      "header header header header header header header header"
+      "content content content content content content content content";
+  }
+  .sidebar{
+    display: none;
+  }
+}
+
+
+/* Tablets (landscape) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
+  .container{
+    grid-template-areas: 
+      "sidebar sidebar header header header header header header"
+      "sidebar sidebar content content content content content content";
+  }
+}
+
+
+/* Tablets (portrait) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
+  .container{
+    grid-template-areas: 
+      "sidebar sidebar header header header header header header"
+      "sidebar sidebar content content content content content content";
+  }
+}
+
+
+/* Large screens ----------- */
+@media only screen and (min-width : 1824px) {
+
+}
